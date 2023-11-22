@@ -1,0 +1,35 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "2497a5cd-004d-43e3-b6e3-854b6c36ed67",
+  "name": "Fast Project to Topography",
+  "description": "The FastProjectToTopography function.",
+  "language": "C#",
+  "model_dependencies": [
+    {
+      "name": "location"
+    }
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Polygons": {
+        "type": "array",
+        "items": {
+          "$ref": "https://schemas.hypar.io/Polygon.json"
+        }
+      },
+      "Ray Density": {
+        "type": "number",
+        "$hyparUnitType": "length",
+        "default": 1
+      },
+      "Use G3": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  },
+  "repository_url": "https://github.com/hypar-io/function",
+  "last_updated": "0001-01-01T00:00:00",
+  "cli_version": "1.11.0-alpha.7"
+}
